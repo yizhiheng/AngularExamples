@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Examples</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="myApp" >
+
+	<div>
+		<p>Angular Intro</p>
+		<p>Name : <input type="text" ng-model="name"></p>
+		<h1>Hello {{name}}</h1>
+	</div>
+	<hr>
+
+	<div ng-init="firstName='John'">
+		<p>The name is <span ng-bind="firstName"></span></p>
+	</div>
+	<hr>
+
+	<div ng-controller="myCtrl">
+		First name: <input type="text" ng-model="firstName"><br>
+		Last name: <input type="test" ng-model="lastName"><br>
+		Full name: {{firstName + "   " + lastName}}
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function ($scope) {
+				$scope.firstName = "John";
+				$scope.lastName = "Doe";
+			});
+		</script>
+	</div>
+	<hr>
+
+	<div ng-init="productName='book'; quantity=2; cost=5">
+		<h3>Angular Expressions</h3>
+		<p>The product is <span ng-bind="productName"></span></p>
+		<p>Total in dollar: {{quantity * cost}}</p>
+	</div>
+	<hr>
+
+	<div ng-init="person={name:'Leo', sex:'M'}">
+		<p>The name is {{person.name}}</p>
+	</div>
+    <hr>
+    
+    <div ng-init="currentName='Leo'">
+        <h4>AngularJS Directives</h4>
+        New name : <input type="text" ng-model="currentName">
+        <p>The new name is {{currentName}}</p>
+    </div>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+</html>
