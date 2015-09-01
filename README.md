@@ -1,1 +1,3 @@
-First Commit
+A few basic example of AngularJS
+---
+
