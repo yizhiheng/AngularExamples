@@ -18,7 +18,7 @@
 	</div>
 	<hr>
 
-	<div ng-controller="myCtrl">
+<!-- 	<div ng-controller="myCtrl">
 		First name: <input type="text" ng-model="firstName"><br>
 		Last name: <input type="test" ng-model="lastName"><br>
 		Full name: {{firstName + "   " + lastName}}
@@ -29,7 +29,7 @@
 				$scope.lastName = "Doe";
 			});
 		</script>
-	</div>
+	</div> -->
 	<hr>
 
 	<div ng-init="productName='book'; quantity=2; cost=5">
@@ -49,6 +49,27 @@
         New name : <input type="text" ng-model="currentName">
         <p>The new name is {{currentName}}</p>
     </div>
+    <hr>
+    
+    <div ng-controller="personCtrl">
+        Name : <input type="text" ng-model="name">
+        Age : <input type="text" ng-model="age"><br>
+        Intro : <span>{{intro}}</span>
+        <br>
+        <span>{{intro()}}</span>
+        <script>
+            var personCtrlApp = angular.module('myApp', []);
+            personCtrlApp.controller('personCtrl', function($scope) {
+                $scope.name = "Leo";
+                $scope.age = 21;
+                $scope.intro = function() {
+                    return "My name is " + $scope.name + ", I am " + $scope.age + " years old";
+                }
+            });
+        </script>
+    
+    </div>
+    <hr>
 
 
 
@@ -58,9 +79,7 @@
     
     
     
-    
-    
-    
+ 
     
     
 
