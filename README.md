@@ -1,3 +1,3 @@
-A few basic example of AngularJS
+A few basic examples of AngularJS
 ---
 
